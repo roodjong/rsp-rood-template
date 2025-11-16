@@ -65,6 +65,11 @@ main = void $ unsafePartial do
           , height: 2469.0
           , variants: { red: "img/rsp/rsp_horizontaal_rood.png", white: "img/rsp/rsp_horizontaal_wit.png" }
           }
+      , rspVertical:
+          { width: 1334.0
+          , height: 2469.0
+          , variants: { red: "img/rsp/rsp_verticaal_rood.png", white: "img/rsp/rsp_verticaal_wit.png" }
+          }
       , rood:
           { width: 2469.0
           , height: 2469.0
@@ -87,6 +92,7 @@ main = void $ unsafePartial do
     let
       logo = case name of
         "rsp" -> logos.rsp
+        "rsp-vertical" -> logos.rspVertical
         "rood" -> logos.rood
         "rsp-rood" -> logos.rspRood
         _ -> logos.rsp
