@@ -135,12 +135,11 @@ main = void $ unsafePartial do
     case align of
       "left" -> pure $ mkSomeLayer titleLayer
       "right" -> pure $ mkSomeLayer titleLayer
+      "center-free" -> pure $ mkSomeLayer titleLayer
       "center" -> do
         RefLayer.modifyM_ (TextBoxLayer.mapTextLayer $ TextLayer.setPosition { x: templateWidth / 2.0, y }) titleLayer
         pure $ mkSomeLayer $ mkUndraggableHorizontal titleLayer
-      _ -> do
-        RefLayer.modifyM_ (TextBoxLayer.mapTextLayer $ TextLayer.setPosition { x: templateWidth / 2.0, y }) titleLayer
-        pure $ mkSomeLayer $ mkUndraggableHorizontal titleLayer
+      _ -> pure $ mkSomeLayer titleLayer
 
   let
     textBoxRotationAngle = -3.0 * Number.pi / 180.0

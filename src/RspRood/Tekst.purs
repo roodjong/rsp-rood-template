@@ -7,18 +7,16 @@ import Data.Number as Number
 import Data.String (toUpper)
 import Effect (Effect)
 import Effect.Ref as Ref
-import Graphics.Canvas (Composite(..), addColorStop, createLinearGradient, getContext2D) as Canvas
+import Graphics.Canvas (Composite(..), getContext2D) as Canvas
 import Graphics.Canvas (Dimensions, ScaleTransform, TextAlign(..), TextBaseline(..))
-import Parsing.String.Basic (letter)
 import Partial.Unsafe (unsafePartial)
 import RspRood.Layer.TextBox (mkTextBoxLayer, textBoxTransform)
 import RspRood.Layer.TextBox as TextBoxLayer
 import Sjablong.Layer (mkSomeLayer)
 import Sjablong.Layer as Layer
-import Sjablong.Layer.Image (mkEmptyImageLayer, mkImageLayer)
+import Sjablong.Layer.Image (mkImageLayer)
 import Sjablong.Layer.Image as ImageLayer
 import Sjablong.Layer.Layers (mkSomeLayers)
-import Sjablong.Layer.Path (FillStyle(..), PathLayer(..))
 import Sjablong.Layer.Rectangle (mkRectangleLayer)
 import Sjablong.Layer.Rectangle as RectangleLayer
 import Sjablong.Layer.Ref (mkRefLayer)
@@ -31,7 +29,7 @@ import Sjablong.Layer.Text.Markup (MarkupTextLayer(..))
 import Sjablong.Layer.Text.Markup as MarkupTextLayer
 import Sjablong.Layer.Transform (mkTransformLayer)
 import Sjablong.Layer.Undraggable (mkUndraggable, mkUndraggableHorizontal)
-import Sjablong.Main (addEventListeners, connectCheckbox, connectCheckboxPure, connectInputPure, connectObjectUrlInput, connectRange, connectScaleRange, connectSelect, connectTextArea, connectTextAreaPure, listenSelect, mkDownloadButton, mkTemplate, mkTemplateContext, redraw)
+import Sjablong.Main (addEventListeners, connectCheckbox, connectCheckboxPure, connectRange, connectSelect, connectTextArea, connectTextAreaPure, listenSelect, mkDownloadButton, mkTemplate, mkTemplateContext, redraw)
 
 instagramDimensions :: Dimensions
 instagramDimensions = { width: 1080.0, height: 1080.0 * 5.0 / 4.0 }
@@ -223,12 +221,11 @@ main = void $ unsafePartial do
     case align of
       "left" -> pure $ mkSomeLayer titleLayer
       "right" -> pure $ mkSomeLayer titleLayer
+      "center-free" -> pure $ mkSomeLayer titleLayer
       "center" -> do
         RefLayer.modifyM_ (TextBoxLayer.mapTextLayer $ TextLayer.setPosition { x: templateWidth / 2.0, y }) titleLayer
         pure $ mkSomeLayer $ mkUndraggableHorizontal titleLayer
-      _ -> do
-        RefLayer.modifyM_ (TextBoxLayer.mapTextLayer $ TextLayer.setPosition { x: templateWidth / 2.0, y }) titleLayer
-        pure $ mkSomeLayer $ mkUndraggableHorizontal titleLayer
+      _ -> pure $ mkSomeLayer titleLayer
 
   let
     textBoxRotationAngle = -3.0 * Number.pi / 180.0
