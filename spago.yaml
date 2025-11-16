@@ -1,0 +1,20 @@
+package:
+  name: rsp-rood-template
+  dependencies:
+    - canvas
+    - console
+    - debug
+    - effect
+    - foldable-traversable
+    - numbers
+    - prelude
+    - refs
+    - sjablong
+    - strings
+workspace:
+  packageSet:
+    registry: 66.5.0
+  extraPackages:
+    sjablong:
+      git: https://github.com/splintersuidman/sjablong.git
+      ref: 6ca4dd98a1630c7e15bcc5adfab10813ae5693f3
