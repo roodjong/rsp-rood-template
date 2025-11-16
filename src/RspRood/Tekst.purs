@@ -241,7 +241,7 @@ main = void $ unsafePartial do
 
   bodyTextLayer <- mkRefLayer $ MarkupTextLayer
     { text: []
-    , lineHeight: 1.5
+    , lineHeight: 1.3
     , position: { x: 64.0 * templateResolution, y: 300.0 * templateResolution }
     , maxWidth: Just $ templateWidth - 2.0 * 64.0 * templateResolution
     , fillStyle: "#000"
@@ -254,7 +254,7 @@ main = void $ unsafePartial do
     , align: AlignLeft
     , baseline: BaselineTop
     , letterSpacing: "0px"
-    , emptyLineHeight: 0.5
+    , emptyLineHeight: 0.25
     , dragOffset: Nothing
     , context: canvasContext
     }
