@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RSP-template: aankondiging</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <main>
+      <div class="canvases">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div id="inputs">
+        <p>Pas de afbeelding en tekst aan in de velden hieronder. De afbeelding en de titel en auteur kunnen met de muis verplaatst worden.</p>
+        <p>Tekst tussen lage streepjes (_<i>voorbeeld</i>_) wordt schuin gezet en tekst tussen asterisken (*<b>voorbeeld</b>*) wordt vet gezet.</p>
+        <div class="label-input-pair">
+          <label>Titel</label>
+          <textarea class="input" id="title">Titel</textarea>
+        </div>
+        <div class="label-input-pair">
+          <label>Uitlijning titel</label>
+          <select id="title-alignment">
+            <option value="center">Gecentreerd</option>
+            <option value="left">Links</option>
+            <option value="right">Rechts</option>
+          </select>
+        </div>
+        <div class="label-input-pair">
+          <label>Tekstgrootte titel</label>
+          <input type="range" class="input" id="title-size" min="100" max="300" step="1" value="200" />
+        </div>
+        <div class="label-input-pair label-input-pair-checkbox">
+          <label>Slagschaduw titel</label>
+          <input type="checkbox" id="title-shadow" checked />
+        </div>
+        <div class="label-input-pair label-input-pair-checkbox">
+          <label>Draai titel</label>
+          <input type="checkbox" id="title-rotate" checked />
+        </div>
+        <div class="label-input-pair">
+          <label>Broodtekst</label>
+          <textarea class="input" id="bodytext">Broodtekst</textarea>
+        </div>
+        <div class="label-input-pair">
+          <label name="color-scheme">Kleurenschema:</label>
+          <select id="color-scheme">
+            <option value="white-red">Wit/rood</option>
+            <option value="pale-red-white">Vaal rood/wit</option>
+            <option value="red-white">Rood/wit</option>
+            <option value="grey-white">Grijs/wit</option>
+            <option value="black-white">Zwart/wit</option>
+            <option value="NATO-blue-white">NAVO-blauw/wit</option>
+            <option value="climate-green-white">Klimaatgroen/wit</option>
+            <option value="purple-white">Cops off campus-paars/wit</option>
+          </select>
+        </div>
+        <div class="label-input-pair">
+          <label>Logo</label>
+          <select id="logo">
+            <option value="rsp">RSP</option>
+            <option value="rood">ROOD</option>
+            <option value="rsp-rood">RSP en ROOD</option>
+          </select>
+        </div>
+        <br>
+        <button id="download">Download</button>
+      </div>
+    </main>
+    <script type="text/javascript" src="Tekst.js"></script>
+  </body>
+</html>

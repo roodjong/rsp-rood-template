@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+.canvases {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+    align-self: stretch;
+    align-items: center;
+    justify-content: center;
+}
+
+.canvases canvas {
+    max-height: 80vh;
+    object-fit: contain;
+    touch-action: none;
+    border: 1px solid black;
+    display: block;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+
+.label-input-pair {
+    display: flex;
+    flex-direction: column;
+}
+
+.label-input-pair-checkbox {
+    flex-direction: row !important;
+}
+
+.label-input-pair .input {
+    font-family: 'IBM Plex Sans', sans-serif;
+}
+
+textarea.input {
+    min-height: 5em;
+}
+
+#inputs {
+    min-width: 30vw;
+}
+
+@media (min-width: 768px) {
+    #inputs {
+        margin-left: 5vw;
+    }
+
+    .canvases canvas {
+        max-width: 60vw;
+    }
+}
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    #inputs {
+        margin-top: 10vh;
+    }
+
+    .canvases canvas {
+        max-width: 80vw;
+    }
+}
+
+#hidden-clip-canvas {
+    display: none;
+}
+
+#index a {
+    flex-grow: 1;
+    flex-shrink: 1;
+    margin: 1em;
+}
+
+#index img {
+    width: 100%;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    src: url("fonts/Bebas Neue Pro Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    src: url("fonts/Bebas Neue Pro Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    src: url("fonts/Bebas Neue Pro Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    src: url("fonts/Bebas Neue Pro Bold Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    src: url("fonts/Bebas Neue Pro Thin.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro";
+    src: url("fonts/Bebas Neue Pro Thin Italic.ttf") format("truetype");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded Middle.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded Middle Italic.ttf") format("truetype");
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded Bold.ttf") format("truetype");
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded Bold Italic.ttf") format("truetype");
+    font-weight: bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded ExtraBold.ttf") format("truetype");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro SemiExpanded";
+    src: url("fonts/Bebas Neue Pro SemiExpanded ExtraBold Italic.ttf") format("truetype");
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro Book";
+    src: url("fonts/Bebas Neue Pro Book.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Bebas Neue Pro Book";
+    src: url("fonts/Bebas Neue Pro Book Italic.ttf") format("truetype");
+    font-weight: normal;
+    font-style: italic;
+}
