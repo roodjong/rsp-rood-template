@@ -60,6 +60,7 @@
             pkgs.purescript-language-server
             pkgs.nodejs
             pkgs.esbuild
+            pkgs.just
           ];
         });
     };

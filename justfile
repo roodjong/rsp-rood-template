@@ -21,7 +21,7 @@ _build-dir:
     mkdir -p {{dist}}
 
 # build the index page
-[group("index")]
+[group("build")]
 build-index: _build-dir build-style build-images
     cp html/index.html {{dist}}/index.html
 
