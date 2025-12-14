@@ -143,7 +143,7 @@ main = void $ unsafePartial do
   titleLayer <- mkRefLayer <=< mkTextBoxLayer "#c2000b" textBoxPadding textBoxShadowOffset textBoxShadowOpacity $ TextLayer
     { text: ""
     , lineHeight: 1.4
-    , position: { x: templateWidth / 2.0, y: templateHeight - 250.0 * templateResolution }
+    , position: { x: templateWidth / 2.0, y: templateHeight - 150.0 * templateResolution }
     , fillStyle: "#fff"
     , fontName: "Bebas Neue Pro"
     , fontStyle: "normal"

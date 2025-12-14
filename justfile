@@ -5,6 +5,7 @@ alias s := serve
 
 dist := "./dist"
 purescript-module := "RspRood"
+port := "8000"
 
 # list available recipes
 default:
@@ -71,4 +72,4 @@ format-check: _format-generate-operators
 # start a HTTP server of the built project
 [group("test")]
 serve:
-    python -m http.server -d {{dist}} -b 127.0.0.1
+    python -m http.server -d {{dist}} -b 127.0.0.1 {{port}}
