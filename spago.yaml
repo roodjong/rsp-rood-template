@@ -17,4 +17,4 @@ workspace:
   extraPackages:
     sjablong:
       git: https://github.com/splintersuidman/sjablong.git
-      ref: 72dbadd81549585b2097580efce21149094374df
+      ref: 6ca4dd98a1630c7e15bcc5adfab10813ae5693f3

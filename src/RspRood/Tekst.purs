@@ -181,11 +181,11 @@ main = void $ unsafePartial do
   logo <- Ref.new _.rsp
   listenSelect templateContext "logo" \name -> void do
     getLogo <- flip Ref.modify logo $ const case name of
-      "rsp" -> _.rsp
-      "rsp-vertical" -> _.rspVertical
-      "rood" -> _.rood
-      "rsp-rood" -> _.rspRood
-      _ -> _.rsp
+        "rsp" -> _.rsp
+        "rsp-vertical" -> _.rspVertical
+        "rood" -> _.rood
+        "rsp-rood" -> _.rspRood
+        _ -> _.rsp
     getVariant <- Ref.read colorScheme <#> _.logo
     setLogo getLogo getVariant
 
