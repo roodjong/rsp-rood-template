@@ -653,7 +653,7 @@
     "aff": {
       "type": "registry",
       "version": "8.0.0",
-      "integrity": "sha256-5MmdI4+0RHBtSBy+YlU3/Cq4R5W2ih3OaRedJIrVHdk=",
+      "integrity": "sha256-9BRIrSdRoYybfiUmBqgKJ66cPqxYHb277bVWQMn/9sg=",
       "dependencies": [
         "bifunctors",
         "control",
