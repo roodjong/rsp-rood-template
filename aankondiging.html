@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RSP-template: aankondiging</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      @keyframes blink {
+        from { background: red; color: white; }
+        to { background: yellow; color: black; }
+      }
+    </style>
   </head>
   <body>
     <main>
@@ -13,6 +19,7 @@
       </div>
       <div id="inputs">
         <p>Pas de afbeelding en tekst aan in de velden hieronder. De afbeelding en de titel en auteur kunnen met de muis verplaatst worden.</p>
+        <p style="animation:blink 1s infinite; display:inline;">Zorg dat het plaatje dat je gebruikt rechtenvrij is! Anders kan dit de vereniging vele duizenden euros kosten!</p>
         <div class="label-input-pair">
           <label>Achtergrondafbeelding</label>
           <input type="file" id="image" accept="image/*" />
